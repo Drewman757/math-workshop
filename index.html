@@ -226,8 +226,8 @@ function playHTML(){
  if(c.msg)h+='<div class="msg '+(c.msgType||'info')+'" role="status">'+c.msg+'</div>';
  if(!done){var fa_=frameHTML('Ten frame',10,c.crossA,'ca',s===3),fb_=frameHTML('Extra counters',c.x,c.crossB,'cb',s===2);h+='<div class="frames">'+(s===2?fb_+fa_:fa_+fb_)+'</div>'};
  if(done){
-  h+='<div class="worked"><b>Subtract '+f.a+' '+MINUS+' '+f.b+' by making a 10.</b><ol><li>Break apart '+f.b+' into '+c.x+' and '+c.y+'.</li><li>Make a 10: '+f.a+' '+MINUS+' '+c.x+' = 10.</li><li>Subtract the rest: 10 '+MINUS+' '+c.y+' = '+c.ans+'.</li></ol>So '+f.a+' '+MINUS+' '+f.b+' = <b>'+c.ans+'</b>.</div>'+
-   '<button class="btn" data-a="next">'+(run.n>=run.total?'See results':'Next problem')+'</button>'}
+  h+='<button class="btn" data-a="next">'+(run.n>=run.total?'See results':'Next problem')+'</button>';
+  h+='<div class="worked"><b>Subtract '+f.a+' '+MINUS+' '+f.b+' by making a 10.</b><ol><li>Break apart '+f.b+' into '+c.x+' and '+c.y+'.</li><li>Make a 10: '+f.a+' '+MINUS+' '+c.x+' = 10.</li><li>Subtract the rest: 10 '+MINUS+' '+c.y+' = '+c.ans+'.</li></ol>So '+f.a+' '+MINUS+' '+f.b+' = <b>'+c.ans+'</b>.</div>';}
  return h}
 function doneHTML(){
  var s=run.stars,t=run.total,stars='';for(var i=0;i<t;i++)stars+='<i class="star'+(i<s?' on':'')+'"></i>';
